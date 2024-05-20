@@ -29,7 +29,7 @@ public class Main {
                 count++;
             }
         }
-        System.out.println(count);
+        bw.write(Integer.toString(count));
 
         br.close();
         bw.flush();
