@@ -8,11 +8,9 @@ public class Main {
 		
 		String str = sc.next();
 		int count = 0;
-		char ch;
 		
 		for(int i = 0; i < str.length(); i++) {
-			ch = str.charAt(i);
-			switch (ch) {
+			switch (str.charAt(i)) {
 			case 'A': case 'B': case 'C':
 				count += 3;
 				break;
