@@ -13,6 +13,7 @@ public class Main {
 		// TODO Auto-generated method stubb
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuffer output = new StringBuffer();
+		output.append("<");
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int N = Integer.parseInt(st.nextToken());
@@ -30,17 +31,15 @@ public class Main {
 				queue.remove();
 			}
 		
-		
 		if(queue.size() == 1) {
-			output.append(queue.peek());
+			output.append(queue.peek()).append(">");
 		} else {
 			output.append(queue.peek()).append(", ");
 		}
 		queue.remove();
 		}
-		System.out.print("<");
+		
 		System.out.print(output);
-		System.out.print(">");
 	}
 
 }
