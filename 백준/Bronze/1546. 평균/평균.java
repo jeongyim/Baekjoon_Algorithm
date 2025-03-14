@@ -7,25 +7,21 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		int N = sc.nextInt();
-		double[] arr = new double[N];
-		double max = 0;
-		double sum = 0;
+		Double[] score = new Double[N];
+		Double M = 0.0;
+		Double sum = 0.0;
 		
-		for (int i = 0; i < N; i++) {
-			arr[i] = sc.nextDouble();
-		}
-		
-		for (int j = 0; j < arr.length; j++) {
-			if(max < arr[j]) {
-				max = arr[j];
+		for(int i = 0; i < N; i++) {
+			score[i] = sc.nextDouble();
+			if(M < score[i]) {
+				M = score[i];
 			}
 		}
 		
-		for(int z = 0; z < arr.length; z++) {
-			arr[z] = (arr[z] / max) * 100;
-			sum += arr[z];
+		for(int j = 0; j < N; j++) {
+			sum += score[j]/M*100;
 		}
-		
+
 		System.out.println(sum / N);
 
 	}
