@@ -1,21 +1,22 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		
-		int N = sc.nextInt();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
+		int[] arr = new int[N];
 		int sum = 0;
-		String str = sc.next();
-		
-		for (int i = 0; i < N; i++) {
-			sum += (str.charAt(i)-'0');
+		String str = br.readLine();
+		for(int i = 0; i < N; i++) {
+			arr[i] = str.charAt(i) - '0';
+			sum += arr[i];
 		}
-		
 		System.out.println(sum);
-
 	}
 
 }
