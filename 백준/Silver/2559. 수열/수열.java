@@ -24,9 +24,7 @@ public class Main {
 		int end = K;
 		while(end <= N) {
 			int sum = S[end] - S[end-K];
-			if(sum > max) {
-				max = sum;
-			}
+			max = Math.max(sum, max);
 			end++;
 		}
 		System.out.println(max);
